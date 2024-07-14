@@ -15,13 +15,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'  # Specify Node.js version 16
 
       - name: Install dependencies
         run: npm install
 
       - name: Run updateReadme script
-        run: npm run update-readme
+        run: npx ts-node updateReadme.ts
 
       - name: Commit changes
         run: |
